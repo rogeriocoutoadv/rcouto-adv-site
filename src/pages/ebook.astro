@@ -1,0 +1,46 @@
+---
+import Layout from '../layouts/BlogPost.astro';
+---
+
+<Layout
+	title="E-book Gratuito: Negociação de Dívidas"
+	description="Baixe agora o guia definitivo para negociar dívidas bancárias com estratégia e segurança jurídica."
+	pubDate={new Date('March 13 2026')}
+	heroImage="/capa-ebook.png"
+>
+	<p>
+		Muitos empresários acreditam que a única opção diante de uma dívida bancária é aceitar as 
+        condições impostas pelo banco. Este e-book foi escrito para provar que existe um 
+        <strong>caminho técnico e estratégico</strong> para proteger seu negócio.
+	</p>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 2rem 0; align-items: center;">
+        <div>
+            <h3>O que você vai encontrar:</h3>
+            <ul>
+                <li>Análise de encargos abusivos;</li>
+                <li>Uso de teses do STJ para defesa;</li>
+                <li>Preservação do fluxo de caixa;</li>
+                <li>Estratégias de blindagem patrimonial.</li>
+            </ul>
+        </div>
+        <div style="text-align: center;">
+            <img src="/capa-ebook.png" alt="Capa do E-book" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
+        </div>
+    </div>
+
+    <div style="background: var(--azul-claro); padding: 2rem; border-radius: 12px; border: 1px solid var(--cinza-borda);">
+        <h3 style="margin-top: 0; color: var(--azul);">Receba o guia no seu e-mail</h3>
+        <p>Preencha os dados abaixo para liberar o seu acesso imediato ao PDF.</p>
+        
+        <form action="https://formspree.io/f/seu-id-aqui" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
+            <input type="text" name="name" placeholder="Seu Nome Completo" required style="padding: 12px; border: 1px solid #ccc; border-radius: 6px;">
+            <input type="email" name="email" placeholder="Seu Melhor E-mail" required style="padding: 12px; border: 1px solid #ccc; border-radius: 6px;">
+            <input type="text" name="empresa" placeholder="Nome da sua Empresa (Opcional)" style="padding: 12px; border: 1px solid #ccc; border-radius: 6px;">
+            
+            <button type="submit" style="background: var(--verde); color: white; padding: 15px; border: none; border-radius: 6px; font-weight: bold; cursor: pointer; font-size: 1.1rem;">
+                QUERO BAIXAR O E-BOOK AGORA
+            </button>
+        </form>
+    </div>
+</Layout>
