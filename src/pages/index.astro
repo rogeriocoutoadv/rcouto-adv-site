@@ -73,3 +73,284 @@
         line-height: 1.15;
         color: var(--azul);
         max-width: 800px;
+        margin-bottom: 20px;
+      }
+
+      .hero p {
+        font-size: 1.1rem;
+        max-width: 760px;
+        margin-bottom: 30px;
+      }
+
+      .botoes {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 14px 22px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      .btn-principal {
+        background: var(--verde);
+        color: var(--branco);
+      }
+
+      .btn-secundario {
+        background: var(--branco);
+        color: var(--azul);
+        border: 1px solid var(--cinza-borda);
+      }
+
+      section {
+        padding: 70px 0;
+      }
+
+      h2 {
+        font-size: 2rem;
+        color: var(--azul);
+        margin-bottom: 18px;
+      }
+
+      .intro {
+        max-width: 800px;
+        margin-bottom: 40px;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 24px;
+      }
+
+      .card-link {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+      }
+
+      .card {
+        border: 1px solid var(--cinza-borda);
+        border-radius: 12px;
+        padding: 24px;
+        background: var(--branco);
+        height: 100%;
+        transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+        cursor: pointer;
+      }
+
+      .card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 24px rgba(15, 39, 71, 0.08);
+        border-color: #b9c9dd;
+      }
+
+      .card h3 {
+        color: var(--azul);
+        margin-bottom: 10px;
+      }
+
+      .destaques {
+        background: var(--azul);
+        color: var(--branco);
+      }
+
+      .destaques h2 {
+        color: var(--branco);
+      }
+
+      .numeros {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 24px;
+        margin-top: 30px;
+      }
+
+      .numero {
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 12px;
+        padding: 24px;
+      }
+
+      .numero strong {
+        display: block;
+        font-size: 2rem;
+        margin-bottom: 8px;
+      }
+
+      .contato-final {
+        background: var(--azul-claro);
+      }
+
+      footer {
+        background: var(--azul);
+        color: var(--branco);
+        padding: 30px 0;
+        font-size: 0.95rem;
+      }
+
+      footer a {
+        color: var(--branco);
+        text-decoration: none;
+      }
+
+      @media (max-width: 768px) {
+        .topo {
+          flex-direction: column;
+          gap: 14px;
+        }
+
+        nav {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 10px 16px;
+        }
+
+        nav a {
+          margin: 0;
+        }
+
+        .hero h1 {
+          font-size: 2rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="container topo">
+        <div class="logo">Rogerio Couto Advocacia</div>
+        <nav>
+          <a href="/">Home</a>
+          <a href="/sobre">Sobre</a>
+          <a href="/bancario">Direito Bancário</a>
+          <a href="/empresarial">Direito Empresarial</a>
+          <a href="/fiscal">Execução Fiscal</a>
+          <a href="/blog">Blog</a>
+          <a href="/contato">Contato</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <h1>Estratégia jurídica para reduzir dívidas bancárias e proteger o patrimônio de pessoas e empresas.</h1>
+          <p>
+            Atuação em Direito Bancário, Empresarial e Tributário, com base em normas e teses atuais,
+            como a Resolução BACEN 4966 e o Tema 1350/STJ. Atendimento direto com o advogado em Joinville e região,
+            com atuação também na Região Sul e suporte digital para demandas em outros estados.
+          </p>
+          <div class="botoes">
+            <a class="btn btn-principal" href="https://wa.me/5547997495458" target="_blank" rel="noopener noreferrer">Falar no WhatsApp</a>
+            <a class="btn btn-secundario" href="/ebook">Baixar e-book gratuito</a>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <h2>Como posso ajudar</h2>
+          <p class="intro">
+            Atuação objetiva e estratégica em questões bancárias, empresariais e tributárias, com foco em solução prática,
+            análise técnica e proteção patrimonial.
+          </p>
+          <div class="grid">
+            <a class="card-link" href="/bancario">
+              <div class="card">
+                <h3>Direito Bancário</h3>
+                <p>Negociação de dívidas bancárias e revisão de contratos com cláusulas abusivas.</p>
+              </div>
+            </a>
+
+            <a class="card-link" href="/bancario">
+              <div class="card">
+                <h3>Negociação de Dívidas</h3>
+                <p>Estratégias com base regulatória para buscar acordos mais viáveis e reduções relevantes.</p>
+              </div>
+            </a>
+
+            <a class="card-link" href="/bancario">
+              <div class="card">
+                <h3>Revisional Bancária</h3>
+                <p>Análise de juros acima da taxa média e desequilíbrios contratuais.</p>
+              </div>
+            </a>
+
+            <a class="card-link" href="/empresarial">
+              <div class="card">
+                <h3>Direito Empresarial</h3>
+                <p>Defesas em ações, recuperação de crédito e análise de prescrição de dívidas.</p>
+              </div>
+            </a>
+
+            <a class="card-link" href="/fiscal">
+              <div class="card">
+                <h3>Execução Fiscal</h3>
+                <p>Defesa técnica com base no Tema 1350/STJ e análise de vícios em CDA.</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="destaques">
+        <div class="container">
+          <h2>Resultados e experiência</h2>
+          <div class="numeros">
+            <div class="numero">
+              <strong>+50%</strong>
+              <span>Reduções relevantes em negociações bancárias, conforme o caso e a estratégia adotada.</span>
+            </div>
+            <div class="numero">
+              <strong>R$ 5 milhões</strong>
+              <span>Em execuções fiscais extintas em 2025, em atuações do escritório.</span>
+            </div>
+            <div class="numero">
+              <strong>Desde 2012</strong>
+              <span>Atuação voltada a pequenas e médias empresas, com atendimento direto e estrutura enxuta.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <h2>Sobre o escritório</h2>
+          <p class="intro">
+            Sou Rogerio Couto, advogado desde 2012, com atuação voltada a pequenas e médias empresas e também a demandas
+            de consumidores em temas bancários. Com a digitalização do Judiciário, hoje atendo Joinville e região,
+            com forte atuação na Região Sul e possibilidade de condução digital de demandas em outros estados.
+          </p>
+        </div>
+      </section>
+
+      <section class="contato-final">
+        <div class="container">
+          <h2>Conteúdo gratuito e contato direto</h2>
+          <p class="intro">
+            Baixe o e-book gratuito sobre negociação de dívidas bancárias ou entre em contato para entender qual estratégia
+            faz mais sentido para o seu caso.
+          </p>
+          <div class="botoes">
+            <a class="btn btn-principal" href="/ebook">Quero receber o e-book</a>
+            <a class="btn btn-secundario" href="mailto:rogerio@rcouto.adv.br">rogerio@rcouto.adv.br</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        Rogerio Couto Advocacia | OAB/SC 31.283 | Joinville/SC | WhatsApp: (47) 99749-5458
+      </div>
+    </footer>
+  </body>
+</html>
