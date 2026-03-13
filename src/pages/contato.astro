@@ -2,48 +2,34 @@
 import MainLayout from '../layouts/MainLayout.astro';
 ---
 
-<Layout
-	title="Contato"
-	description="Entre em contato com o escritório do Dr. Rogério Alcoforado Couto em Joinville."
-	pubDate={new Date('March 13 2026')}
-	heroImage="/blog-placeholder-about.jpg"
+<MainLayout
+  title="Contato | Rogerio Couto Advocacia"
+  description="Entre em contato para análise jurídica em Direito Bancário, Empresarial e Execução Fiscal."
 >
-	<p>
-		Estamos prontos para atender sua demanda com agilidade e sigilo. Seja para uma consulta 
-        presencial em Joinville ou atendimento digital em qualquer lugar do Brasil, escolha o canal 
-        de sua preferência abaixo.
-	</p>
+  <h1>Contato</h1>
 
-    <div style="margin: 2rem 0; padding: 1.5rem; background: #f4f4f4; border-radius: 8px;">
-        <h3 style="margin-top: 0;">🚀 Atendimento Imediato</h3>
-        <p>Para casos urgentes ou agendamento rápido, utilize nosso WhatsApp:</p>
-        <a href="https://wa.me/5547999999999" style="display: inline-block; background: #25d366; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold;">
-            Falar no WhatsApp
-        </a>
-    </div>
+  <p>
+    Se você precisa analisar um contrato bancário, discutir uma execução fiscal
+    ou entender a melhor estratégia jurídica para sua empresa, entre em contato.
+  </p>
 
-    <h3>📍 Localização e Canais</h3>
-    <ul>
-        <li><strong>E-mail:</strong> <a href="mailto:rogerio@rcouto.adv.br">contato@rcouto.adv.br</a></li>
-        <li><strong>Endereço:</strong> Rua Arthur Baechtold, 15, Bairro Gloroa, Joinville, SC (Atendimento Presencial sob agendamento)</li>
-        <li><strong>Horário:</strong> Segunda a Sexta, das 09h às 18h</li>
-    </ul>
+  <p>
+    O atendimento é direto com o advogado, com atuação em Joinville e região,
+    além de suporte digital para demandas em outras localidades.
+  </p>
 
-    <hr />
+  <h2>Formas de contato</h2>
+  <ul>
+    <li><strong>WhatsApp:</strong> (47) 99749-5458</li>
+    <li><strong>E-mail:</strong> rogerio@rcouto.adv.br</li>
+    <li><strong>Atendimento:</strong> Joinville/SC e suporte digital</li>
+  </ul>
 
-    <h3>✉️ Envie uma Mensagem</h3>
-    <p>Se preferir, preencha o formulário abaixo e retornaremos em breve:</p>
-    
-    <form action="https://formspree.io/f/seu-id-aqui" method="POST" style="display: flex; flex-direction: column; gap: 10px;">
-        <label>Seu Nome:
-            <input type="text" name="name" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
-        </label>
-        <label>Seu E-mail:
-            <input type="email" name="email" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
-        </label>
-        <label>Mensagem:
-            <textarea name="message" rows="4" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;"></textarea>
-        </label>
-        <button type="submit" style="background: #004a99; color: white; padding: 10px; border: none; border-radius: 5px; cursor: pointer;">Enviar Mensagem</button>
-    </form>
-</Layout>
+  <p>
+    Se preferir, use o botão abaixo para iniciar o contato pelo WhatsApp.
+  </p>
+
+  <a class="botao" href="https://wa.me/5547997495458" target="_blank" rel="noopener noreferrer">
+    Falar no WhatsApp
+  </a>
+</MainLayout>
