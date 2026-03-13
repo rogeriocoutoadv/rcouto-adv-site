@@ -1,0 +1,49 @@
+---
+import Layout from '../layouts/BlogPost.astro';
+---
+
+<Layout
+	title="Contato"
+	description="Entre em contato com o escritório do Dr. Rogério Alcoforado Couto em Joinville."
+	pubDate={new Date('March 13 2026')}
+	heroImage="/blog-placeholder-about.jpg"
+>
+	<p>
+		Estamos prontos para atender sua demanda com agilidade e sigilo. Seja para uma consulta 
+        presencial em Joinville ou atendimento digital em qualquer lugar do Brasil, escolha o canal 
+        de sua preferência abaixo.
+	</p>
+
+    <div style="margin: 2rem 0; padding: 1.5rem; background: #f4f4f4; border-radius: 8px;">
+        <h3 style="margin-top: 0;">🚀 Atendimento Imediato</h3>
+        <p>Para casos urgentes ou agendamento rápido, utilize nosso WhatsApp:</p>
+        <a href="https://wa.me/5547999999999" style="display: inline-block; background: #25d366; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold;">
+            Falar no WhatsApp
+        </a>
+    </div>
+
+    <h3>📍 Localização e Canais</h3>
+    <ul>
+        <li><strong>E-mail:</strong> <a href="mailto:contato@rcouto.adv.br">contato@rcouto.adv.br</a></li>
+        <li><strong>Endereço:</strong> Joinville, SC (Atendimento Presencial sob agendamento)</li>
+        <li><strong>Horário:</strong> Segunda a Sexta, das 09h às 18h</li>
+    </ul>
+
+    <hr />
+
+    <h3>✉️ Envie uma Mensagem</h3>
+    <p>Se preferir, preencha o formulário abaixo e retornaremos em breve:</p>
+    
+    <form action="https://formspree.io/f/seu-id-aqui" method="POST" style="display: flex; flex-direction: column; gap: 10px;">
+        <label>Seu Nome:
+            <input type="text" name="name" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+        </label>
+        <label>Seu E-mail:
+            <input type="email" name="email" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+        </label>
+        <label>Mensagem:
+            <textarea name="message" rows="4" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;"></textarea>
+        </label>
+        <button type="submit" style="background: #004a99; color: white; padding: 10px; border: none; border-radius: 5px; cursor: pointer;">Enviar Mensagem</button>
+    </form>
+</Layout>
