@@ -633,8 +633,7 @@ footer{background:#111827;padding:72px 48px 36px}
 
 <script>
 const GITHUB_REPO='rogeriocoutoadv/rcouto-adv-site';
-const ARTIGOS_FILE='artigos.json';
-const API_BASE='https://api.github.com/repos/'+GITHUB_REPO+'/contents/'+ARTIGOS_FILE;
+const ARTIGOS_URL='https://raw.githubusercontent.com/'+GITHUB_REPO+'/main/artigos.json';
 
 let artigos=[];
 
@@ -642,10 +641,11 @@ async function loadArtigos(){
   const g=document.getElementById('artigosGrid');
   if(g)g.innerHTML='<p style="color:var(--text-light);font-size:14px;font-weight:300;grid-column:1/-1">Carregando artigos...</p>';
   try{
-    const r=await fetch(API_BASE,{headers:{'Accept':'application/vnd.github.v3+json'}});
+    const r=await fetch(ARTIGOS_URL+'?t='+Date.now());
     if(r.ok){
-      const d=await r.json();
-      artigos=JSON.parse(atob(d.content.replace(/\n/g,'')));
+      artigos=await r.json();
+    } else {
+      artigos=[];
     }
   }catch(e){artigos=[];}
   renderArtigos('todos');
