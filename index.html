@@ -540,7 +540,7 @@ footer{background:#111827;padding:72px 48px 36px}
     <h1 class="section-title">Artigos Jurídicos</h1>
     <div class="section-line"></div>
   </div></div>
-  <div class="artigos-body">
+      <div class="artigos-body">
     <div class="artigos-filters">
       <button class="filter-btn active" data-cat="todos" onclick="filterArtigos('todos',this)">Todos</button>
       <button class="filter-btn" data-cat="bancario" onclick="filterArtigos('bancario',this)">Bancário</button>
@@ -549,7 +549,6 @@ footer{background:#111827;padding:72px 48px 36px}
       <button class="filter-btn" data-cat="consumidor" onclick="filterArtigos('consumidor',this)">Consumidor</button>
     </div>
     <div class="artigos-grid" id="artigosGrid"></div>
-    <button class="btn-dark" style="margin-top:48px;display:block;margin-left:auto" onclick="openAdmin()">+ Publicar novo artigo</button>
   </div>
   <footer><div class="footer-inner"><div class="footer-bottom"><p class="footer-copy">© 2025 Rogerio Couto Advocacia. Todos os direitos reservados.</p><p class="footer-oab">OAB/SC 31.283</p></div></div></footer>
 </div>
@@ -633,13 +632,26 @@ footer{background:#111827;padding:72px 48px 36px}
 </div>
 
 <script>
+const GITHUB_REPO='rogeriocoutoadv/rcouto-adv-site';
+const ARTIGOS_FILE='artigos.json';
+const API_BASE='https://api.github.com/repos/'+GITHUB_REPO+'/contents/'+ARTIGOS_FILE;
+
+let artigos=[];
+
+async function loadArtigos(){
+  const g=document.getElementById('artigosGrid');
+  if(g)g.innerHTML='<p style="color:var(--text-light);font-size:14px;font-weight:300;grid-column:1/-1">Carregando artigos...</p>';
+  try{
+    const r=await fetch(API_BASE,{headers:{'Accept':'application/vnd.github.v3+json'}});
+    if(r.ok){
+      const d=await r.json();
+      artigos=JSON.parse(atob(d.content.replace(/\n/g,'')));
+    }
+  }catch(e){artigos=[];}
+  renderArtigos('todos');
+}
+
 const catLabel={bancario:'Direito Bancário',empresarial:'Direito Empresarial',tributario:'Direito Tributário',consumidor:'Direito do Consumidor'};
-let artigos=[
-  {id:1,titulo:'Resolução CMN 4.966: como as normas de provisionamento bancário beneficiam empresas endividadas',categoria:'bancario',resumo:'Entenda como a exigência de provisionamento progressivo pelos bancos cria incentivos reais para negociação de dívidas empresariais.',data:'15 mar 2025'},
-  {id:2,titulo:'Recuperação judicial ou extrajudicial: qual a melhor opção para sua empresa?',categoria:'empresarial',resumo:'Uma análise comparativa dos dois instrumentos jurídicos disponíveis para empresas em dificuldade financeira.',data:'02 mar 2025'},
-  {id:3,titulo:'Planejamento tributário: cinco estratégias legítimas para reduzir impostos em 2025',categoria:'tributario',resumo:'O planejamento tributário adequado pode reduzir significativamente a carga fiscal da empresa sem riscos legais.',data:'18 fev 2025'},
-];
-let nextId=4;
 
 function renderArtigos(filter){
   filter=filter||'todos';
